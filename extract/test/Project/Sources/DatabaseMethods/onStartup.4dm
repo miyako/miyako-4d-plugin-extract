@@ -129,6 +129,11 @@ $llama:=cs:C1710.llama.llama.new($port; $huggingfaces; $homeFolder; $options; $e
 
 //MARK: Reranker
 
+/*
+if the reranker has a different tokeniser from embeddings
+you should account for some buffer to avoid error
+*/
+
 Case of 
 	: (True:C214)
 		
@@ -136,7 +141,7 @@ Case of
 		$path:="bge-reranker-v2-m3-Q8_0.gguf"
 		$URL:="keisuke-miyako/bge-reranker-v2-m3-gguf-q8_0"
 		
-		$max_position_embeddings:=1026
+		$max_position_embeddings:=1600
 		$pooling:="rank"
 		$batch_size:=$max_position_embeddings
 		$ubatch_size:=$max_position_embeddings

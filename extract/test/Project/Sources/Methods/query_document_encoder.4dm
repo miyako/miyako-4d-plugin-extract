@@ -39,6 +39,7 @@ now rerank the n best results relevant to query
 		var $parameters:=cs:C1710.AIKit.RerankerParameters.new({model: "default"; top_n: 3})
 		
 		$batch:=$client.rerank.create($reranker; $parameters)
+		
 		If ($batch.success)
 			var $rankings : Collection
 			$rankings:=$batch.results

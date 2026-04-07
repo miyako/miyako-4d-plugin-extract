@@ -1,6 +1,5 @@
 //%attributes = {}
 var $query : Text
-//harrier
 $query:="Instruct: Retrieve semantically similar text\nQuery: thibaud and josh talk about future of 4D"
 
 var $AIClient : cs:C1710.AIKit.OpenAI
