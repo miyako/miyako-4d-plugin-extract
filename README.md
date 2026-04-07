@@ -172,3 +172,69 @@ Split into fixed size batches of `1024` tokens each
 - `0.05` seconds * `1` million documents = `13.89` hours
 
  To generate a batch of long context embeddings it is essential to **rent a GPU cluster**. Processing millions of document locally on a standard PC with a decoder-only model like Harrier or Qwen3 would take months.
+
+In any case, you would need a reranker to prune the initial fetch by embeddings.
+
+```4d
+var $query : Text
+$query:="4D Write Pro AI features summit 2021"
+
+var $AIClient : cs.AIKit.OpenAI
+$AIClient:=cs.AIKit.OpenAI.new()
+$AIClient.baseURL:="http://127.0.0.1:8080/v1"  // embeddings
+
+var $batch : Object
+$batch:=$AIClient.embeddings.create($query)
+
+var $reranked : Collection
+$reranked:=[]
+
+If ($batch.success)
+	$vector:=$batch.embedding.embedding
+	
+	/*
+		fetch matching documents; accept some false positives
+	*/
+	
+	var $comparison:={vector: $vector; metric: mk cosine; threshold: 0.6}
+	var $results:=ds.Embeddings.query("embedding > :1"; $comparison)
+	If ($results.length#0)
+		
+		/*
+			get related document
+		*/
+		
+		$documents:=$results.text
+		
+		/*
+			now rerank the n best results relevant to query
+		*/
+		
+		var $client:=cs.AIKit.Reranker.new({baseURL: "http://127.0.0.1:8081/v1"})
+		var $reranker:=cs.AIKit.RerankerQuery.new({\
+		query: $query; documents: $documents})
+		var $parameters:=cs.AIKit.RerankerParameters.new({model: "default"; top_n: 3})
+		
+		$batch:=$client.rerank.create($reranker; $parameters)
+		
+		If ($batch.success)
+			var $rankings : Collection
+			$rankings:=$batch.results
+			var $ranking : Object
+			var $rankedresults : Collection
+			$rankedresults:=[]
+			var $ee : cs.EmbeddingsEntity
+			For each ($ranking; $rankings)
+				$ee:=$results.at($ranking.index)
+				$rankedresults.push({embeddings: $ee; relevance_score: $ranking.relevance_score})
+			End for each 
+			$rankedresults:=$rankedresults.extract(\
+			"embeddings.document.ID"; "document"; \
+			"embeddings.text"; "text"; \
+			"relevance_score"; "score")
+			ALERT(JSON Stringify($rankedresults; *))
+		End if 
+	End if 
+End if
+```
+
