@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<xliff version="1.0" xmlns:d4="http://www.4d.com/d4-ns">
+    <header>
+        <note>Universal Document Parser</note>
+    </header>
+    <group resname="themes">
+        <trans-unit id="" resname="07E15F9018E24DCABBF795D95CE955C5" translate="no">
+            <source>Extract Document Type</source>
+        </trans-unit>
+    </group>
+    <group restype="x-4DK#" d4:groupName="07E15F9018E24DCABBF795D95CE955C5">
+        <trans-unit d4:value="0:L" id="07E15F9018E24DCABBF795D95CE955C5.1">
+            <source>Extract Document XLSX</source>
+        </trans-unit>
+        <trans-unit d4:value="1:L" id="07E15F9018E24DCABBF795D95CE955C5.2">
+            <source>Extract Document DOCX</source>
+        </trans-unit>
+        <trans-unit d4:value="2:L" id="07E15F9018E24DCABBF795D95CE955C5.3">
+            <source>Extract Document PPTX</source>
+        </trans-unit>
+        <trans-unit d4:value="3:L" id="07E15F9018E24DCABBF795D95CE955C5.4">
+            <source>Extract Document XLS</source>
+        </trans-unit>
+        <trans-unit d4:value="4:L" id="07E15F9018E24DCABBF795D95CE955C5.5">
+            <source>Extract Document DOC</source>
+        </trans-unit>
+        <trans-unit d4:value="5:L" id="07E15F9018E24DCABBF795D95CE955C5.6">
+            <source>Extract Document PPT</source>
+        </trans-unit>
+    </group>
+    <group resname="themes">
+        <trans-unit id="" resname="D15BF8C5C33F452E973FAAADF506348B" translate="no">
+            <source>Extract Output Type</source>
+        </trans-unit>
+    </group>
+    <group restype="x-4DK#" d4:groupName="D15BF8C5C33F452E973FAAADF506348B">
+        <trans-unit d4:value="0:L" id="D15BF8C5C33F452E973FAAADF506348B.1">
+            <source>Extract Output Object</source>
+        </trans-unit>
+        <trans-unit d4:value="1:L" id="D15BF8C5C33F452E973FAAADF506348B.2">
+            <source>Extract Output Text</source>
+        </trans-unit>
+        <trans-unit d4:value="2:L" id="D15BF8C5C33F452E973FAAADF506348B.3">
+            <source>Extract Output Collection</source>
+        </trans-unit>
+        <trans-unit d4:value="3:L" id="D15BF8C5C33F452E973FAAADF506348B.4">
+            <source>Extract Output Collections</source>
+        </trans-unit>
+    </group>
+    <group resname="themes">
+        <trans-unit id="" resname="D15BF8C5C33F452E973FAAADF506348B" translate="no">
+            <source>Extract Output Type</source>
+        </trans-unit>
+    </group>
+    <group restype="x-4DK#" d4:groupName="18E11A5B756F4091A7DF45FDC9F87D37">
+        <trans-unit d4:value="0:L" id="18E11A5B756F4091A7DF45FDC9F87D37.1">
+            <source>Extract Option Tokenizer File</source>
+        </trans-unit>
+    </group>
+    <group resname="themes">
+        <trans-unit id="" resname="D68B6FECB4C0401DB3E346817F1A4C23" translate="no">
+            <source>Extract Pooling Mode</source>
+        </trans-unit>
+    </group>
+    <group restype="x-4DK#" d4:groupName="D68B6FECB4C0401DB3E346817F1A4C23">
+        <trans-unit d4:value="0:L" id="D68B6FECB4C0401DB3E346817F1A4C23.1">
+            <source>Extract Pooling Mode Mean</source>
+        </trans-unit>
+        <trans-unit d4:value="1:L" id="D68B6FECB4C0401DB3E346817F1A4C23.2">
+            <source>Extract Pooling Mode CLS</source>
+        </trans-unit>
+        <trans-unit d4:value="2:L" id="D68B6FECB4C0401DB3E346817F1A4C23.3">
+            <source>Extract Pooling Mode Last</source>
+        </trans-unit>
+    </group>
+</xliff>

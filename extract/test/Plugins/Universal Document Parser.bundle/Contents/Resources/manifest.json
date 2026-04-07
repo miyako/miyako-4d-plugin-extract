@@ -1,0 +1,16 @@
+{
+    "name": "Universal Document Parser",
+    "id": 20000,
+    "commands": [
+        {
+            "theme": "Extract",
+            "syntax": "Extract(&L;&L;&J):J",
+            "threadSafe": true
+        },
+        {
+            "theme": "Extract",
+            "syntax": "Extract SET OPTION(&L;&J)",
+            "threadSafe": true
+        }
+    ]
+}

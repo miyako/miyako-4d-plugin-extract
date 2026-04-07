@@ -1,0 +1,25 @@
+{
+	"version": 2100,
+	"dependencies": {
+		"workers": {
+			"github": "miyako/workers",
+			"version": "latest"
+		},
+		"tcp": {
+			"github": "miyako/tcp",
+			"version": "latest"
+		},
+		"event": {
+			"github": "miyako/event",
+			"version": "latest"
+		},
+		"llama cpp": {
+			"github": "miyako/llama-cpp",
+			"version": "latest"
+		},
+		"aikit": {
+			"github": "miyako/aikit",
+			"version": "latest"
+		}
+	}
+}

@@ -1,0 +1,11 @@
+extract/Universal Document Parser.dmg
+extract/test/userPreferences.*
+extract/build/*
+extract/Universal Document Parser.xcodeproj/xcuserdata/*
+extract/Universal Document Parser.xcodeproj/project.xcworkspace/*
+extract/test/Project/Trash/*
+extract/Universal Document Parser.xcodeproj/xcshareddata/*
+extract/test/Project/DerivedData/*
+extract/test/Data/Replaced Files*
+extract/test/Data/Logs/*
+extract/test/Data/data.journal
