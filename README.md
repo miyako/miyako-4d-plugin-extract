@@ -183,6 +183,12 @@ Split into fixed size batches of `1024` tokens each
 
  To generate a batch of long context embeddings it is essential to **rent a GPU cluster**. Processing millions of document locally on a standard PC with a decoder-only model like Harrier or Qwen3 would take months.
 
+- [**Modal**](https://modal.com) - Serverless; auto-scaling large batches
+- [**Runpod**](https://www.runpod.io) - Serverless; quick prototyping and medium batches
+- [**Lambda**](https://lambda.ai) - Dedicated VM; long-running jobs or sensitive data
+
+---
+
 In any case, you would need a reranker to prune the initial fetch by embeddings.
 
 ```4d
