@@ -9,3 +9,6 @@ extract/test/Project/DerivedData/*
 extract/test/Data/Replaced Files*
 extract/test/Data/Logs/*
 extract/test/Data/data.journal
+extract/test/data\[0001\].4BK
+extract/test/backupHistory.json
+extract/test/data\[0002\].4BK
