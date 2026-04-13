@@ -28,6 +28,7 @@
     <ClCompile Include="4D Plugin API\Classes\C_TEXT.cpp" />
     <ClCompile Include="4DPlugin-Universal-Document-Parser.cpp" />
     <ClCompile Include="chunker.cpp" />
+    <ClCompile Include="parsers\olecf-parser.cpp" />
     <ClCompile Include="parsers\opc-parser.cpp" />
     <ClCompile Include="parsers\pdfium-parser.cpp" />
     <ClCompile Include="parsers\tidy-parser.cpp" />
@@ -45,6 +46,7 @@
     <ClInclude Include="4D Plugin API\PublicTypes.h" />
     <ClInclude Include="4DPlugin-Universal-Document-Parser.h" />
     <ClInclude Include="chunker.h" />
+    <ClInclude Include="parsers\olecf-parser.h" />
     <ClInclude Include="parsers\opc-parser.h" />
     <ClInclude Include="parsers\pdfium-parser.h" />
     <ClInclude Include="parsers\tidy-parser.h" />
@@ -206,7 +208,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
       <AdditionalIncludeDirectories>$(ProjectDir);support;include;include\windows;4D Plugin API\Classes;4D Plugin API;parsers;include\libxml2;include-win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>TIDY_STATIC;LIBXML_STATIC;NONDLL;BGDWIN32;WIN64;WIN32;NOMINMAX;_WINDOWS;NDEBUG;_USRDLL;MY4DPLUGIN_EXPORTS;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>LIBOLECF_HAVE_WIDE_CHARACTER_TYPE;TIDY_STATIC;LIBXML_STATIC;NONDLL;BGDWIN32;WIN64;WIN32;NOMINMAX;_WINDOWS;NDEBUG;_USRDLL;MY4DPLUGIN_EXPORTS;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <PrecompiledHeader>
       </PrecompiledHeader>
@@ -224,7 +226,7 @@
       <SubSystem>Windows</SubSystem>
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <AdditionalDependencies>tidys.lib;libxlsreader.lib;ggml-base.lib;ggml.lib;ggml-cpu.lib;llama.lib;crypt32.lib;ws2_32.lib;pdfium.dll.lib;libcharset.lib;lzma.lib;libiconv.lib;libxml2.lib;mce.lib;zlib.lib;opc.lib;jsoncpp.lib;libcrypto.lib;comctl32.lib;Shlwapi.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>libclocale.lib;libcsplit.lib;libcpath.lib;libcerror.lib;libcfile.lib;libbfio.lib;libuna.lib;libcdata.lib;libolecf.lib;tidys.lib;libxlsreader.lib;ggml-base.lib;ggml.lib;ggml-cpu.lib;llama.lib;crypt32.lib;ws2_32.lib;pdfium.dll.lib;libcharset.lib;lzma.lib;libiconv.lib;libxml2.lib;mce.lib;zlib.lib;opc.lib;jsoncpp.lib;libcrypto.lib;comctl32.lib;Shlwapi.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(ProjectDir)lib\windows64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>

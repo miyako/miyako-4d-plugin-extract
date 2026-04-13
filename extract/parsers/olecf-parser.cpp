@@ -1862,7 +1862,11 @@ bool olecf_parse_data(std::vector<uint8_t>& data, PA_ObjectRef obj,
     delete_rtf_window(hwnd);
 
     if(temp_input_path.length()) {
+#ifdef _WIN32
+        DeleteFile((LPCWSTR)temp_input_path.c_str());
+#else
         _unlink(temp_input_path.c_str());
+#endif
     }
     
     return success;
