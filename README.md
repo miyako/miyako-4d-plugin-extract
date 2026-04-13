@@ -43,9 +43,15 @@ $task:={file: $file; \
 |docx|`Extract Document DOCX`| `1`|
 |pptx|`Extract Document PPTX`| `2`|
 |xls |`Extract Document XLS` | `3`|
+|doc |`Extract Document DOC` | `4`|
+|ppt |`Extract Document PPT` | `5`|
 |pdf |`Extract Document PDF` | `6`|
+|txt |`Extract Document MSG` | `7`|
+|eml|||
+|txt |`Extract Document RTF` | `9`|
 |html|`Extract Document HTML`|`10`|
 |txt |`Extract Document TXT` |`11`|
+
 
 ### Supported Output Formats
 
