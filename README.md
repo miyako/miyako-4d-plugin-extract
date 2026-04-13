@@ -82,7 +82,7 @@ $task:={file: $file; \
 |`max_paragraph_length`|Limit paragraphs per page/slide ( default:`-1`)
 |`tokens_length`|Limit tokens per chunks (default:`1024`)
 |`token_padding`|Pad last chunk to fixed token count (default:`false`)
-|`pooling_mode`|If `Lasr` prepend else append for token padding (default:`Mean`)
+|`pooling_mode`|If `Last` prepend else append for token padding (default:`Mean`)
 |`overlap_ratio`|Overlap tokens between chunks (default:`0.09`)
 
 > [!TIP]
