@@ -470,6 +470,11 @@ void Extract(PA_PluginParameters params) {
         if(ob_get_s(document, L"password", &_password))
            password = (const char *)_password.c_str();
         
+        CUTF8String _charset;
+        std::string charset = "iso-8859-1";
+        if(ob_get_s(document, L"charset", &_charset))
+            charset = (const char *)_charset.c_str();
+        
         int max_paragraph_length = -1;
         if(ob_is_defined(document, L"max_paragraph_length")) {
             int intValue = (int)ob_get_n(document, L"max_paragraph_length");
@@ -563,6 +568,20 @@ void Extract(PA_PluginParameters params) {
                                           overlap_ratio,
                                           password);
                         break;
+                    case input_type_xls:
+                        xls_parse_data(data,
+                                       returnValue,
+                                       ot,
+                                       max_paragraph_length,
+                                       unique_values_only,
+                                       text_as_tokens,
+                                       tokens_length,
+                                       token_padding,
+                                       (int)pooling_mode,
+                                       overlap_ratio,
+                                       charset);
+                        break;
+                        
                     default:
                         break;
                 }

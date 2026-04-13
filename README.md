@@ -42,6 +42,7 @@ $task:={file: $file; \
 |xlsx|`Extract Document XLSX`|`0`|
 |docx|`Extract Document DOCX`|`1`|
 |pptx|`Extract Document PPTX`|`2`|
+|xls |`Extract Document XLS` |`3`|
 |pdf |`Extract Document PDF` |`6`|
 
 ### Supported Output Formats
@@ -66,6 +67,7 @@ $task:={file: $file; \
 |Option|Description
 |-|-|
 |`password`||Password to open DOCX, XLSX, PPTX
+|`charset`||Charset to open XLS
 |`text_as_tokens`|Return chunks as collection of token IDs instaed of text
 |`unique_values_only`|Skip duplicate values at row or paragraph/column level (default:`false`)
 |`max_paragraph_length`|Limit paragraphs per page/slide ( default:`-1`)

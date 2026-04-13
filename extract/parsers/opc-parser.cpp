@@ -147,7 +147,6 @@ static void document_to_json_ss(Workbook& document,
     switch (mode) {
         case output_type_text:
         {
-//            std::string text = "";
             PA_CollectionRef pages = PA_CreateCollection();
             for (const auto &sheet : document.sheets) {
                 bool emptyCol = true;
@@ -893,9 +892,7 @@ bool opc_parse_data(std::vector<uint8_t>& data, PA_ObjectRef obj,
                     int pooling_mode,
                     float overlap_ratio,
                     std::string password) {
-    
-//    std::string text;
-    
+        
     if(password.length()) {
 
         ms::Format format;
