@@ -40,6 +40,7 @@
 
 #include "pdfium-parser.h"
 #include "opc-parser.h"
+#include "xls-parser.h"
 #include "chunker.h"
 
 typedef enum {
@@ -49,7 +50,9 @@ typedef enum {
     input_type_xls,
     input_type_doc,
     input_type_ppt,
-    input_type_pdf
+    input_type_pdf,
+    input_type_msg,
+    input_type_eml
 }input_type;
 
 typedef enum {
