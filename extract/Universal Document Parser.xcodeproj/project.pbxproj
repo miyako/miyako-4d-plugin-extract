@@ -32,6 +32,8 @@
 		D1A4421A2F8C99B400337528 /* xls-parser.h in Headers */ = {isa = PBXBuildFile; fileRef = D1A442182F8C99B400337528 /* xls-parser.h */; };
 		D1A4421B2F8C99B400337528 /* xls-parser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D1A442192F8C99B400337528 /* xls-parser.cpp */; };
 		D1A4421D2F8C9E4200337528 /* libxlsreader.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D1A4421C2F8C9E4200337528 /* libxlsreader.a */; };
+		D1A442202F8CA49500337528 /* txt-parser.h in Headers */ = {isa = PBXBuildFile; fileRef = D1A4421E2F8CA49500337528 /* txt-parser.h */; };
+		D1A442212F8CA49500337528 /* txt-parser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D1A4421F2F8CA49500337528 /* txt-parser.cpp */; };
 		D1D3DE912F8C76310034E941 /* pdfium-parser.h in Headers */ = {isa = PBXBuildFile; fileRef = D1D3DE8F2F8C76310034E941 /* pdfium-parser.h */; };
 		D1D3DE922F8C76310034E941 /* pdfium-parser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D1D3DE902F8C76310034E941 /* pdfium-parser.cpp */; };
 		D1D3DE942F8C80BA0034E941 /* libpdfium.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D1D3DE932F8C80BA0034E941 /* libpdfium.dylib */; };
@@ -99,6 +101,8 @@
 		D1A442182F8C99B400337528 /* xls-parser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "xls-parser.h"; path = "parsers/xls-parser.h"; sourceTree = "<group>"; };
 		D1A442192F8C99B400337528 /* xls-parser.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; name = "xls-parser.cpp"; path = "parsers/xls-parser.cpp"; sourceTree = "<group>"; };
 		D1A4421C2F8C9E4200337528 /* libxlsreader.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libxlsreader.a; path = a/libxlsreader.a; sourceTree = "<group>"; };
+		D1A4421E2F8CA49500337528 /* txt-parser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "txt-parser.h"; path = "parsers/txt-parser.h"; sourceTree = "<group>"; };
+		D1A4421F2F8CA49500337528 /* txt-parser.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; name = "txt-parser.cpp"; path = "parsers/txt-parser.cpp"; sourceTree = "<group>"; };
 		D1D3DE8F2F8C76310034E941 /* pdfium-parser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "pdfium-parser.h"; path = "parsers/pdfium-parser.h"; sourceTree = "<group>"; };
 		D1D3DE902F8C76310034E941 /* pdfium-parser.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; name = "pdfium-parser.cpp"; path = "parsers/pdfium-parser.cpp"; sourceTree = "<group>"; };
 		D1D3DE932F8C80BA0034E941 /* libpdfium.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpdfium.dylib; path = "test/Plugins/Universal Document Parser.bundle/Contents/MacOS/libpdfium.dylib"; sourceTree = "<group>"; };
@@ -195,6 +199,8 @@
 				D1D9747D2F7BA6000081DFC5 /* C_TYPES.h */,
 				D1D3DE902F8C76310034E941 /* pdfium-parser.cpp */,
 				D1D3DE8F2F8C76310034E941 /* pdfium-parser.h */,
+				D1A4421F2F8CA49500337528 /* txt-parser.cpp */,
+				D1A4421E2F8CA49500337528 /* txt-parser.h */,
 				D1A442192F8C99B400337528 /* xls-parser.cpp */,
 				D1A442182F8C99B400337528 /* xls-parser.h */,
 				D1D974742F7BA5CC0081DFC5 /* opc-parser.cpp */,
@@ -279,6 +285,7 @@
 			files = (
 				D1D974752F7BA5CC0081DFC5 /* opc-parser.h in Headers */,
 				18B684F706944F2000CC6A1E /* 4DPluginAPI.h in Headers */,
+				D1A442202F8CA49500337528 /* txt-parser.h in Headers */,
 				18B684F806944F2000CC6A1E /* EntryPoints.h in Headers */,
 				D1D9747E2F7BA6000081DFC5 /* C_TEXT.h in Headers */,
 				D1D9747F2F7BA6000081DFC5 /* C_TYPES.h in Headers */,
@@ -420,6 +427,7 @@
 				D1D974722F7BA5B40081DFC5 /* 4DPlugin-Universal-Document-Parser.cpp in Sources */,
 				D1D974762F7BA5CC0081DFC5 /* opc-parser.cpp in Sources */,
 				D1D3DE922F8C76310034E941 /* pdfium-parser.cpp in Sources */,
+				D1A442212F8CA49500337528 /* txt-parser.cpp in Sources */,
 				D13116A91A03ACB700DE1322 /* 4DPluginAPI.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

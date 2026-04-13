@@ -36,6 +36,15 @@
         <trans-unit d4:value="8:L" id="07E15F9018E24DCABBF795D95CE955C5.9">
             <source>Extract Document EML</source>
         </trans-unit>
+        <trans-unit d4:value="9:L" id="07E15F9018E24DCABBF795D95CE955C5.10">
+            <source>Extract Document RTF</source>
+        </trans-unit>
+        <trans-unit d4:value="10:L" id="07E15F9018E24DCABBF795D95CE955C5.11">
+            <source>Extract Document HTML</source>
+        </trans-unit>
+        <trans-unit d4:value="11:L" id="07E15F9018E24DCABBF795D95CE955C5.12">
+            <source>Extract Document TXT</source>
+        </trans-unit>
     </group>
     <group resname="themes">
         <trans-unit id="" resname="D15BF8C5C33F452E973FAAADF506348B" translate="no">
