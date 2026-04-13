@@ -42,6 +42,7 @@ $task:={file: $file; \
 |xlsx|`Extract Document XLSX`|`0`|
 |docx|`Extract Document DOCX`|`1`|
 |pptx|`Extract Document PPTX`|`2`|
+|xls |`Extract Document XLS` |`3`|
 |pdf |`Extract Document PDF` |`6`|
 
 ### Supported Output Formats
