@@ -12,3 +12,7 @@ extract/test/Data/data.journal
 extract/test/data\[0001\].4BK
 extract/test/backupHistory.json
 extract/test/data\[0002\].4BK
+extract/test/Plugins/Universal Document Parser.bundle/Contents/Windows64/Universal Document Parser.exp
+extract/test/Plugins/Universal Document Parser.bundle/Contents/Windows64/Universal Document Parser.lib
+extract/Objs/*
+extract/.vs/*
