@@ -57,9 +57,9 @@ $task:={file: $file; \
 
 |Constant|Value|Description
 |:-|-:|-
-|`Extract Output Object`|`0`|For custom processing 
-|`Extract Output Text`|`1`|Suitable for **OpenAI** style `embeddings` API, decoder-only model 
-|`Extract Output Collection`|`2`|Suitable for **OpenAI** style `embeddings` API, encoder-only model 
+|`Extract Output Object`|`0`|For custom processing or debug
+|`Extract Output Text`|`1`|For custom processing or debug
+|`Extract Output Collection`|`2`|Suitable for **OpenAI** style `embeddings` API 
 |`Extract Output Collections`|`3`|Suitable for **Voyage AI** style `contextualizedembeddings` API 
 
 ### Extract Pooling Mode
