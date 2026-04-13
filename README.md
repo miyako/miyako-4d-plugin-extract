@@ -8,7 +8,7 @@ Universal Document Parser
 
 ## Abstract
 
-Extract text from various document types in a chunked format can which be passed directly to one of the following endpoints:
+Extract text from various document types in a chunked format which can be passed directly to one of the following endpoints:
 
 - `embeddings`
 - `contextualizedembeddings`
@@ -46,9 +46,9 @@ $task:={file: $file; \
 |doc |`Extract Document DOC` | `4`|
 |ppt |`Extract Document PPT` | `5`|
 |pdf |`Extract Document PDF` | `6`|
-|txt |`Extract Document MSG` | `7`|
+|msg |`Extract Document MSG` | `7`|
 |eml|||
-|txt |`Extract Document RTF` | `9`|
+|rtf |`Extract Document RTF` | `9`|
 |html|`Extract Document HTML`|`10`|
 |txt |`Extract Document TXT` |`11`|
 
@@ -57,9 +57,9 @@ $task:={file: $file; \
 
 |Constant|Value|Description
 |:-|-:|-
-|`Extract Output Object`|`0`|For custom processing 
-|`Extract Output Text`|`1`|Suitable for **OpenAI** style `embeddings` API, decoder-only model 
-|`Extract Output Collection`|`2`|Suitable for **OpenAI** style `embeddings` API, encoder-only model 
+|`Extract Output Object`|`0`|For custom processing, focus on structure
+|`Extract Output Text`|`1`|For custom processing, focus on text 
+|`Extract Output Collection`|`2`|Suitable for **OpenAI** style `embeddings` API 
 |`Extract Output Collections`|`3`|Suitable for **Voyage AI** style `contextualizedembeddings` API 
 
 ### Extract Pooling Mode
@@ -74,14 +74,15 @@ $task:={file: $file; \
 
 |Option|Description
 |-|-|
-|`password`||Password to open DOCX, XLSX, PPTX
-|`charset`||Charset to open XLS
-|`text_as_tokens`|Return chunks as collection of token IDs instaed of text
+|`password`|Password to open DOCX, XLSX, PPTX
+|`charset`|charset to open XLS
+|`codepage`|codepage to open DOC or PPT
+|`text_as_tokens`|Return chunks as collection of token IDs instead of text (for debug)
 |`unique_values_only`|Skip duplicate values at row or paragraph/column level (default:`false`)
 |`max_paragraph_length`|Limit paragraphs per page/slide ( default:`-1`)
 |`tokens_length`|Limit tokens per chunks (default:`1024`)
 |`token_padding`|Pad last chunk to fixed token count (default:`false`)
-|`pooling_mode`|If `Lasr` prepend else append for token padding (default:`Mean`)
+|`pooling_mode`|If `Last` prepend else append for token padding (default:`Mean`)
 |`overlap_ratio`|Overlap tokens between chunks (default:`0.09`)
 
 > [!TIP]
