@@ -58,7 +58,7 @@ $task:={file: $file; \
 |Constant|Value|Description
 |:-|-:|-
 |`Extract Output Object`|`0`|For custom processing, focus on structure
-|`Extract Output Text`|`1`|For custom processing, focus on text content
+|`Extract Output Text`|`1`|For custom processing, focus on text 
 |`Extract Output Collection`|`2`|Suitable for **OpenAI** style `embeddings` API 
 |`Extract Output Collections`|`3`|Suitable for **Voyage AI** style `contextualizedembeddings` API 
 
