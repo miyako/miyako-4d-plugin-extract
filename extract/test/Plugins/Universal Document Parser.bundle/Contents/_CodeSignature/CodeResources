@@ -28,13 +28,17 @@
 		<dict>
 			<key>cdhash</key>
 			<data>
-			JwtnRfxv+VpEhvElnsW9uoOO7aQ=
+			7WaUwC89roDL0hIePG+lrfdSJ0s=
 			</data>
 			<key>requirement</key>
 			<string>identifier libpdfium and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = Y69CWUC25B</string>
 		</dict>
 		<key>QuickLook/Thumbnail.png</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			hC+U8EqvyIRM1lLakHLfvl4V9Tc=
+			</data>
 			<key>hash2</key>
 			<data>
 			nGfrvibB5KlzvZgF4Bra+l0HpRloxismgTLePnOwCdk=
@@ -42,6 +46,10 @@
 		</dict>
 		<key>Resources/English.lproj/InfoPlist.strings</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			SxYMrI6/Wg9C00MaR4ftWaoqDd4=
+			</data>
 			<key>hash2</key>
 			<data>
 			R5HvtgqwlgHklnglslCGlYTGwCjOZVErSgbLHf0tzWc=
@@ -51,6 +59,10 @@
 		</dict>
 		<key>Resources/constants.xlf</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			1UoGLkJreiSja/b1pV+kc6ztKio=
+			</data>
 			<key>hash2</key>
 			<data>
 			YebP2WoDapP76Dy+/uJUBgIpuBs9DqH7CNHR+IErd8I=
@@ -58,6 +70,10 @@
 		</dict>
 		<key>Resources/manifest.json</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			38S6OKbH17m+n6O1V/mdP+msVYk=
+			</data>
 			<key>hash2</key>
 			<data>
 			gHeShUItU07OXY9cFPq94y5+6S70KIWOxZrahCsY6pk=
@@ -65,6 +81,10 @@
 		</dict>
 		<key>Windows64/pdfium.dll</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			i7SgRWOpp298To4PKDz2O1DDdsw=
+			</data>
 			<key>hash2</key>
 			<data>
 			GrWwUVN9ph6D6d4vJDDJ/pjuk+O5jgYyFB2uZ/8xBhg=
