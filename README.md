@@ -51,7 +51,10 @@ $task:={file: $file; \
 |rtf |`Extract Document RTF` | `9`|
 |html|`Extract Document HTML`|`10`|
 |txt |`Extract Document TXT` |`11`|
+|md  |`Extract Document MD` | `12`|
 
+> [!NOTE]
+> `.md` is not converted to plain text.
 
 ### Supported Output Formats
 
@@ -77,6 +80,7 @@ $task:={file: $file; \
 |`password`|Password to open DOCX, XLSX, PPTX
 |`charset`|charset to open XLS
 |`codepage`|codepage to open DOC or PPT
+|`break_by_section`|use headers to break sections for MD
 |`text_as_tokens`|Return chunks as collection of token IDs instead of text (for debug)
 |`unique_values_only`|Skip duplicate values at row or paragraph/column level (default:`false`)
 |`max_paragraph_length`|Limit paragraphs per page/slide ( default:`-1`)
