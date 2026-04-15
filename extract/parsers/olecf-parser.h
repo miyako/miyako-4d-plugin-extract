@@ -64,7 +64,7 @@
 #include <tidybuffio.h>
 
 #ifdef _WIN32
-#define _unlink DeleteFile
+//#define _unlink DeleteFile
 #define _libolecf_file_open libolecf_file_open_wide
 #else
 #define HWND char*

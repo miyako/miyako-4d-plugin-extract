@@ -15,6 +15,7 @@
     <ClCompile Include="parsers\xls-parser.cpp" />
     <ClCompile Include="parsers\tidy-parser.cpp" />
     <ClCompile Include="parsers\txt-parser.cpp" />
+    <ClCompile Include="parsers\olecf-parser.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="4D Plugin API\4DPluginAPI.h">
@@ -46,6 +47,7 @@
     <ClInclude Include="parsers\xls-parser.h" />
     <ClInclude Include="parsers\tidy-parser.h" />
     <ClInclude Include="parsers\txt-parser.h" />
+    <ClInclude Include="parsers\olecf-parser.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="4D Plugin API">

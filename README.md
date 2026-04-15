@@ -47,7 +47,7 @@ $task:={file: $file; \
 |ppt |`Extract Document PPT` | `5`|
 |pdf |`Extract Document PDF` | `6`|
 |msg |`Extract Document MSG` | `7`|
-|eml|||
+|eml |`Extract Document EML` | `8`|
 |rtf |`Extract Document RTF` | `9`|
 |html|`Extract Document HTML`|`10`|
 |txt |`Extract Document TXT` |`11`|
