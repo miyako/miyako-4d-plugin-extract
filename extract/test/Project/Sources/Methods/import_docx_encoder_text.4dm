@@ -1,8 +1,8 @@
 //%attributes = {"invisible":true,"preemptive":"capable"}
-TRUNCATE TABLE:C1051([Documents:1])
-SET DATABASE PARAMETER:C642([Documents:1]; Table sequence number:K37:31; 0)
-TRUNCATE TABLE:C1051([Embeddings:2])
-SET DATABASE PARAMETER:C642([Embeddings:2]; Table sequence number:K37:31; 0)
+//TRUNCATE TABLE([Documents])
+//SET DATABASE PARAMETER([Documents]; Table sequence number; 0)
+//TRUNCATE TABLE([Embeddings])
+//SET DATABASE PARAMETER([Embeddings]; Table sequence number; 0)
 
 var $AIClient : cs:C1710.AIKit.OpenAI
 $AIClient:=cs:C1710.AIKit.OpenAI.new()

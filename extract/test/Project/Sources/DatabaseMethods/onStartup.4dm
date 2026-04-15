@@ -135,6 +135,20 @@ you should account for some buffer to avoid error
 */
 
 Case of 
+	: (False:C215)  //pretty slow...
+		
+		$folder:=$homeFolder.folder("zerank-1-small")
+		$path:="zerank-1-small-Q8_0.gguf"
+		$URL:="keisuke-miyako/zerank-1-small-gguf-q8_0"
+		
+		$max_position_embeddings:=1600
+		$pooling:="rank"
+		$batch_size:=$max_position_embeddings
+		$ubatch_size:=$max_position_embeddings
+		$n_gpu_layers:=12
+		$cache_type_k:="f16"
+		$cache_type_v:="f16"
+		
 	: (True:C214)
 		
 		$folder:=$homeFolder.folder("bge-reranker-v2-m3")

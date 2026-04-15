@@ -1,11 +1,6 @@
 {
 	"(onnx)": {},
-	"DEBUG": {
-		"methods": [
-			"import_docx_decoder_tokens",
-			"import_docx_encoder_tokens"
-		]
-	},
+	"DEBUG": {},
 	"trash": {
 		"groups": [
 			"(onnx)"
