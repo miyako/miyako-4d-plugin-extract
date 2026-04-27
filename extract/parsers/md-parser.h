@@ -29,6 +29,10 @@
     }output_type;
 #endif
 
+#include "cmark-gfm.h"
+#include "cmark-gfm-extension_api.h"
+#include "cmark-gfm-extensions/cmark-gfm-core-extensions.h"
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string>

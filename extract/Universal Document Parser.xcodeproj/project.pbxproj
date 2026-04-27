@@ -16,6 +16,8 @@
 		D1037FAF2F80F05A0026408F /* libtokenizers_c.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D1037FAC2F80F05A0026408F /* libtokenizers_c.a */; };
 		D1037FB02F80F05A0026408F /* libtokenizers_cpp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D1037FAD2F80F05A0026408F /* libtokenizers_cpp.a */; };
 		D1037FB12F80F05A0026408F /* libsentencepiece.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D1037FAE2F80F05A0026408F /* libsentencepiece.a */; };
+		D10407652F9F7CCB005AF27D /* libcmark-gfm.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D10407632F9F7CCB005AF27D /* libcmark-gfm.a */; };
+		D10407662F9F7CCB005AF27D /* libcmark-gfm-extensions.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D10407642F9F7CCB005AF27D /* libcmark-gfm-extensions.a */; };
 		D10B9C792F8F2845008EBFF5 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D10B9C782F8F2845008EBFF5 /* libresolv.tbd */; };
 		D10B9C7B2F8F2850008EBFF5 /* libpcre.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D10B9C7A2F8F2850008EBFF5 /* libpcre.tbd */; };
 		D130064F12F02D9700702C0E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D130064E12F02D9700702C0E /* Cocoa.framework */; };
@@ -111,6 +113,8 @@
 		D1037FAC2F80F05A0026408F /* libtokenizers_c.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libtokenizers_c.a; path = a/libtokenizers_c.a; sourceTree = "<group>"; };
 		D1037FAD2F80F05A0026408F /* libtokenizers_cpp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libtokenizers_cpp.a; path = a/libtokenizers_cpp.a; sourceTree = "<group>"; };
 		D1037FAE2F80F05A0026408F /* libsentencepiece.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libsentencepiece.a; path = a/libsentencepiece.a; sourceTree = "<group>"; };
+		D10407632F9F7CCB005AF27D /* libcmark-gfm.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libcmark-gfm.a"; path = "a/libcmark-gfm.a"; sourceTree = "<group>"; };
+		D10407642F9F7CCB005AF27D /* libcmark-gfm-extensions.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libcmark-gfm-extensions.a"; path = "a/libcmark-gfm-extensions.a"; sourceTree = "<group>"; };
 		D10B9C782F8F2845008EBFF5 /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
 		D10B9C7A2F8F2850008EBFF5 /* libpcre.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libpcre.tbd; path = usr/lib/libpcre.tbd; sourceTree = SDKROOT; };
 		D130064E12F02D9700702C0E /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
@@ -186,6 +190,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D10407652F9F7CCB005AF27D /* libcmark-gfm.a in Frameworks */,
+				D10407662F9F7CCB005AF27D /* libcmark-gfm-extensions.a in Frameworks */,
 				D10B9C7B2F8F2850008EBFF5 /* libpcre.tbd in Frameworks */,
 				D10B9C792F8F2845008EBFF5 /* libresolv.tbd in Frameworks */,
 				D187F5EC2F8F20ED008E6A56 /* libassuan.a in Frameworks */,
@@ -330,6 +336,8 @@
 		D16FBB3C22A4C07E008F0416 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D10407632F9F7CCB005AF27D /* libcmark-gfm.a */,
+				D10407642F9F7CCB005AF27D /* libcmark-gfm-extensions.a */,
 				D10B9C7A2F8F2850008EBFF5 /* libpcre.tbd */,
 				D10B9C782F8F2845008EBFF5 /* libresolv.tbd */,
 				D187F5DD2F8F20ED008E6A56 /* libassuan.a */,
@@ -515,7 +523,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if test \"$CONFIGURATION\" == 'Deployment'; then\n\n    USER_NAME=keisuke.miyako@4d.com\n    UUID=`uuidgen | tr -d - | tr -d '\\n' | tr '[:upper:]' '[:lower:]'`\n    DEVELOPER_ID=`security find-identity -p codesigning -v | egrep 'Developer ID Application[^\"]+' -o`\n    PRODUCT_PATH=\"$CODESIGNING_FOLDER_PATH\"\n    \n    #clean\n    xattr -cr \"$PRODUCT_PATH\"\n    codesign --remove-signature \"$PRODUCT_PATH\"\n    \n    #sign\n    codesign --verbose --deep --timestamp --force --sign \"Developer ID Application: keisuke miyako (Y69CWUC25B)\" \"$PRODUCT_PATH\"\n    \n    #archive\n    DMG_PATH=\"$PROJECT_DIR/$PRODUCT_NAME.dmg\"\n    ZIP_PATH=\"$PROJECT_DIR/$PRODUCT_NAME.zip\" #for windows\n    rm -f \"$DMG_PATH\"\n    hdiutil create -format UDBZ -plist -srcfolder \"$PRODUCT_PATH\" \"$DMG_PATH\"\n    rm -f \"$ZIP_PATH\"\n    ditto -c -k --keepParent \"$PRODUCT_PATH\" \"$ZIP_PATH\"\n    \n    xcrun notarytool submit \"$ZIP_PATH\" --keychain-profile \"notarytool\" --wait\n    xcrun notarytool submit \"$DMG_PATH\" --keychain-profile \"notarytool\" --wait\n        \n    xcrun stapler staple \"$DMG_PATH\"\n\nelse\n    echo \"No notarization performed as this is not a release build.\"\nfi\n";
+			shellScript = "if test \"$CONFIGURATION\" == '*Deployment'; then\n\n    USER_NAME=keisuke.miyako@4d.com\n    UUID=`uuidgen | tr -d - | tr -d '\\n' | tr '[:upper:]' '[:lower:]'`\n    DEVELOPER_ID=`security find-identity -p codesigning -v | egrep 'Developer ID Application[^\"]+' -o`\n    PRODUCT_PATH=\"$CODESIGNING_FOLDER_PATH\"\n    \n    #clean\n    xattr -cr \"$PRODUCT_PATH\"\n    codesign --remove-signature \"$PRODUCT_PATH\"\n    \n    #sign\n    codesign --verbose --deep --timestamp --force --sign \"Developer ID Application: keisuke miyako (Y69CWUC25B)\" \"$PRODUCT_PATH\"\n    \n    #archive\n    DMG_PATH=\"$PROJECT_DIR/$PRODUCT_NAME.dmg\"\n    ZIP_PATH=\"$PROJECT_DIR/$PRODUCT_NAME.zip\" #for windows\n    rm -f \"$DMG_PATH\"\n    hdiutil create -format UDBZ -plist -srcfolder \"$PRODUCT_PATH\" \"$DMG_PATH\"\n    rm -f \"$ZIP_PATH\"\n    ditto -c -k --keepParent \"$PRODUCT_PATH\" \"$ZIP_PATH\"\n    \n    xcrun notarytool submit \"$ZIP_PATH\" --keychain-profile \"notarytool\" --wait\n    xcrun notarytool submit \"$DMG_PATH\" --keychain-profile \"notarytool\" --wait\n        \n    xcrun stapler staple \"$DMG_PATH\"\n\nelse\n    echo \"No notarization performed as this is not a release build.\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -558,7 +566,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD)";
+				ARCHS = x86_64;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_LINK_OBJC_RUNTIME = NO;
@@ -617,7 +625,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD)";
+				ARCHS = x86_64;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_LINK_OBJC_RUNTIME = NO;
@@ -673,7 +681,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD)";
+				ARCHS = x86_64;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_LINK_OBJC_RUNTIME = NO;
@@ -726,6 +734,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
@@ -772,6 +781,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
@@ -818,6 +828,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;

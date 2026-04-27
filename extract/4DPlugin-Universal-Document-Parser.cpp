@@ -25,6 +25,7 @@ static void OnStartup() {
 #endif
     
     g_mime_init();
+    cmark_gfm_core_extensions_ensure_registered();
 }
 
 void PluginMain(PA_long32 selector, PA_PluginParameters params) {
