@@ -29,10 +29,6 @@
     }output_type;
 #endif
 
-#include "cmark-gfm.h"
-#include "cmark-gfm-extension_api.h"
-#include "cmark-gfm-extensions/cmark-gfm-core-extensions.h"
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string>
@@ -45,6 +41,10 @@
 #include "4DPlugin-JSON.h"
 #include "tokenizers_cpp.h"
 #include "4DPlugin-Universal-Document-Parser.h"
+
+#include "cmark-gfm.h"
+#include "cmark-gfm-extension_api.h"
+#include "cmark-gfm-extensions/cmark-gfm-core-extensions.h"
 
 extern bool md_parse_data(std::vector<uint8_t>& data, PA_ObjectRef obj,
                           output_type mode,
