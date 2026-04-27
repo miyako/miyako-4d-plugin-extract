@@ -28,7 +28,7 @@
 		<dict>
 			<key>cdhash</key>
 			<data>
-			7WaUwC89roDL0hIePG+lrfdSJ0s=
+			JwtnRfxv+VpEhvElnsW9uoOO7aQ=
 			</data>
 			<key>requirement</key>
 			<string>identifier libpdfium and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = Y69CWUC25B</string>
@@ -83,11 +83,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			BHDpHTGaKXhpIRNsiCz8Zg0feuc=
+			iXaSFJQ5SojLi62BwSC/C1r5yJw=
 			</data>
 			<key>hash2</key>
 			<data>
-			i71Kc+9TOarQ0bK7blI7YAg23AOaWW2om0P8U+emu68=
+			JKmkPq2Vu8qgH/l6hict4Q+mkLibIPgove5aJexaGEI=
 			</data>
 		</dict>
 		<key>Windows64/pdfium.dll</key>
